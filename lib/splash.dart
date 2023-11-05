@@ -23,10 +23,18 @@ class _SplashScreenState extends State<SplashScreen> {
 
 
   return Scaffold(
-      body: Center(child: Lottie.asset('assets/Animation - 1699208995263.json', // Replace with the path to your animation file
-        width: 200, // Set the width of the animation
-        height: 200, // Set the height of the animation
-        fit: BoxFit.fill, // Adjust the fit of the animation
+      body: Center(child: Column(
+        children: [
+          Lottie.asset('assets/Animation - 1699208995263.json', // Replace with the path to your animation file
+            width: 200, // Set the width of the animation
+            height: 200, // Set the height of the animation
+            fit: BoxFit.fill, // Adjust the fit of the animation
+          ),
+          SizedBox(
+            height: 15,
+            child: CircularProgressIndicator(),
+          )
+        ],
       ),),
 
     );
