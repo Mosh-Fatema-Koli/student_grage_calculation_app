@@ -65,7 +65,15 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(child: Padding(
             padding: const EdgeInsets.all(10),
-            child: SubjectList(),
+            child: Suljectlist(
+              onDismiss: (index){
+                print("Deleted element $index");
+                GradeHelper.alladdedSubList.removeAt(index);
+                setState(() {
+
+                });
+              },
+            ),
           ))
         ],
       ),
